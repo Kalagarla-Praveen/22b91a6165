@@ -72,11 +72,11 @@ class Statistics extends Component<{}, StatisticsState> {
   }
 
   loadData() {
-    const urls = StorageService.getUrls();
-    const clicks = StorageService.getClicks();
+    const urls = StorageService.getUrls() || [];
+    const clicks = StorageService.getClicks() || [];
     
     const now = new Date();
-    const activeUrls = urls.filter(url => new Date(url.expiresAt) > now).length;
+    const activeUrls = urls.filter((url: any) => new Date(url.expiresAt) > now).length;
     const expiredUrls = urls.length - activeUrls;
     
     const stats = {
@@ -114,6 +114,7 @@ class Statistics extends Component<{}, StatisticsState> {
   }
 
   render() {
+    console.log("Statistics render", this.state);
     const { urls, stats } = this.state;
 
     return (
