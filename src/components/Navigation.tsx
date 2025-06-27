@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import { Link, BarChart } from '@mui/icons-material';
 import { logger } from '../utils/logger.js';
 
@@ -32,6 +33,8 @@ class Navigation extends Component<NavigationProps> {
           
           <Box sx={{ display: 'flex', gap: 2 }}>
             <Button
+              component={RouterLink}
+              to="/"
               color="inherit"
               startIcon={<Link />}
               onClick={() => this.handleNavigation('shortener')}
@@ -44,6 +47,8 @@ class Navigation extends Component<NavigationProps> {
             </Button>
             
             <Button
+              component={RouterLink}
+              to="/statistics"
               color="inherit"
               startIcon={<BarChart />}
               onClick={() => this.handleNavigation('statistics')}
