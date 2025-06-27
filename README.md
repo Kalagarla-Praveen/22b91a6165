@@ -5,6 +5,10 @@ A React-based web application to shorten long URLs with optional custom shortcod
 
 ---
 
+🚀 **Live Demo**:  
+👉 [https://22b91a6165-4x5fy5fl5-praveens-projects-ec42932b.vercel.app/shortener](https://22b91a6165-4x5fy5fl5-praveens-projects-ec42932b.vercel.app/shortener)
+
+
 ## ✨ Features
 
 - 🔗 Shorten any long URL
